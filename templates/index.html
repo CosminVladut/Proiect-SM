@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Automation Dashboard</title>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>Status Dashboard</h1>
+    <div>
+        <p><strong>Temperature:</strong> <span id="temp">--</span> °C</p>
+        <p><strong>Humidity:</strong> <span id="humidity">--</span></p>
+        <p><strong>Fire Detected:</strong> <span id="fire">--</span></p>
+        <p><strong>Intruder Detected:</strong> <span id="intruder">--</span></p>
+        <p><strong>Last Updated:</strong> <span id="timestamp">--</span></p>
+    </div>
+
+    <h2>Controls</h2>
+    <form id="settings-form">
+        <label>Motor Mode:
+            <select name="motor_mode">
+                <option value="auto">Auto</option>
+                <option value="manual">Manual</option>
+            </select>
+        </label><br><br>
+        <label>Home Mode:
+            <select name="home_mode">
+                <option value="home">Home</option>
+                <option value="away">Away</option>
+            </select>
+        </label><br><br>
+        <label>Manual Motor Start:
+            <input type="checkbox" name="manual_motor_start">
+        </label><br><br>
+        <label>Max Temp:
+            <input type="number" name="selected_maximum_temp" min="10" max="50">°C
+        </label><br><br>
+        <label>Distance Threshold:
+            <input type="number" name="selected_should_be_distance" min="1" max="100">cm
+        </label><br><br>
+	<label>Receiver email:
+            <input type="email" name="receiver_email" value="vladutcosmin321@outlook.com" required>
+        </label><br><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+
